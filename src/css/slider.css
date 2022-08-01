@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#mainDiv {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainDiv .btn {
+  height: 200px;
+  width: 50px;
+  margin: 10px;
+  border: none;
+  background-color: antiquewhite;
+}
+#mainDiv .btn:hover {
+  background-color: rgb(121, 120, 119);
+}
+#mainDiv #swipper {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#mainDiv #swipper .imgDiv {
+  width: 100%;
+  height: 400px;
+}
+#mainDiv #swipper .imgDiv img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mainDiv #swipper .textDiv .nameH1 {
+  font-size: 45px;
+  font-family: monospace;
+}/*# sourceMappingURL=slider.css.map */
