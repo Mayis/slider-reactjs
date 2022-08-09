@@ -2,10 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Slider from "./Slider.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Slider />);
+root.render();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
