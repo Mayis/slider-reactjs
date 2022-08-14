@@ -12,6 +12,7 @@ export default class Posts extends Component {
     };
     this.selectedPost = this.selectedPost.bind(this);
     this.canShow = this.canShow.bind(this);
+    this.deletePost = this.deletePost.bind(this);
   }
 
   componentDidMount() {
@@ -30,9 +31,13 @@ export default class Posts extends Component {
   canShow() {
     this.setState({ ...this.state, activePost: null });
   }
+  deletePost(postDel) {
+    const post = this.state.post.filter((post) => post.id !== postDel.id);
+    this.setState({ ...this.state, post: post });
+  }
   render() {
     const { post, activePost } = this.state;
-
+    console.log(post);
     return (
       <>
         <div className="fullDiv">
@@ -40,6 +45,7 @@ export default class Posts extends Component {
             post.map((post, i) => (
               <Post
                 key={`post${i}`}
+                deletePost={this.deletePost}
                 selectedPost={this.selectedPost}
                 post={post}
               />

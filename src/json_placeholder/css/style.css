@@ -53,9 +53,16 @@
 .onePost .titleDiv {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .onePost .titleDiv p {
   margin-right: 5px;
+}
+.onePost .titleDiv .deletePost {
+  position: absolute;
+  z-index: 9999;
+  right: 50px;
+  color: red;
 }
 .onePost p {
   padding: 10px;
