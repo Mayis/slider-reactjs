@@ -83,4 +83,32 @@
 }
 #fullModalDiv #modal {
   width: 90%;
+}
+
+#fullDel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 11111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fullDel .delDiv {
+  width: 400px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 0, 0, 0.925);
+}
+#fullDel .delDiv p {
+  cursor: pointer;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

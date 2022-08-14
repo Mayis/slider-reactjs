@@ -9,6 +9,7 @@ export default class Posts extends Component {
       user: props.activeUser,
       post: null,
       activePost: null,
+      showDelPost: false,
     };
     this.selectedPost = this.selectedPost.bind(this);
     this.canShow = this.canShow.bind(this);
@@ -31,8 +32,9 @@ export default class Posts extends Component {
   canShow() {
     this.setState({ ...this.state, activePost: null });
   }
-  deletePost(postDel) {
-    const post = this.state.post.filter((post) => post.id !== postDel.id);
+
+  deletePost(delPost) {
+    const post = this.state.post.filter((post) => post.id !== delPost.id);
     this.setState({ ...this.state, post: post });
   }
   render() {
