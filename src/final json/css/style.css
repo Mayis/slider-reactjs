@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+.lightBgr {
+  background-color: black;
+  transition: 0.4s;
+}
+
+.darkBgr {
+  background-color: white;
+  transition: 0.4s;
+}
+
+.light {
+  color: black;
+  transition: 0.4s;
+}
+
+.dark {
+  color: white;
+  transition: 0.4s;
+}
+
+#header {
+  transition: 0.4s;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgb(94, 91, 91);
+}
+#header #backDiv {
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 22px;
+  transition: 0.4s;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#header .lightBack {
+  transition: 0.4s;
+  background-color: rgb(9, 74, 165);
+  color: white;
+}
+#header .darkBack {
+  transition: 0.4s;
+  background-color: white;
+  color: black;
+}
+#header #modeDiv {
+  position: relative;
+  width: 400px;
+  /* From uiverse.io by @mobinkakei */
+}
+#header #modeDiv .toggleWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  padding: 0 200px;
+  transform: translate3d(-50%, -50%, 0);
+  color: white;
+}
+#header #modeDiv .toggleWrapper input {
+  position: absolute;
+  left: -99em;
+}
+#header #modeDiv .toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 50px;
+  background-color: #83d8ff;
+  border-radius: 84px;
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#header #modeDiv .toggle:before {
+  content: "PM";
+  position: absolute;
+  left: -50px;
+  top: 15px;
+  font-size: 18px;
+}
+#header #modeDiv .toggle:after {
+  content: "AM";
+  position: absolute;
+  right: -48px;
+  top: 15px;
+  font-size: 18px;
+  color: #749ed7;
+}
+#header #modeDiv .toggle__handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 3px;
+  width: 44px;
+  height: 44px;
+  background-color: #ffcf96;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+#header #modeDiv .toggle__handler .crater {
+  position: absolute;
+  background-color: #e8cda5;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 100%;
+}
+#header #modeDiv .toggle__handler .crater--1 {
+  top: 18px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+}
+#header #modeDiv .toggle__handler .crater--2 {
+  top: 28px;
+  left: 22px;
+  width: 6px;
+  height: 6px;
+}
+#header #modeDiv .toggle__handler .crater--3 {
+  top: 10px;
+  left: 25px;
+  width: 8px;
+  height: 8px;
+}
+#header #modeDiv .star {
+  position: absolute;
+  background-color: #fff;
+  transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 50%;
+}
+#header #modeDiv .star--1 {
+  top: 10px;
+  left: 35px;
+  z-index: 0;
+  width: 30px;
+  height: 3px;
+}
+#header #modeDiv .star--2 {
+  top: 18px;
+  left: 28px;
+  z-index: 1;
+  width: 30px;
+  height: 3px;
+}
+#header #modeDiv .star--3 {
+  top: 27px;
+  left: 40px;
+  z-index: 0;
+  width: 30px;
+  height: 3px;
+}
+#header #modeDiv .star--4,
+#header #modeDiv .star--5,
+#header #modeDiv .star--6 {
+  opacity: 0;
+  transition: all 300ms 0 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#header #modeDiv .star--4 {
+  top: 16px;
+  left: 11px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+#header #modeDiv .star--5 {
+  top: 32px;
+  left: 17px;
+  z-index: 0;
+  width: 3px;
+  height: 3px;
+  transform: translate3d(3px, 0, 0);
+}
+#header #modeDiv .star--6 {
+  top: 36px;
+  left: 28px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+#header #modeDiv input:checked + .toggle {
+  background-color: #749dd6;
+}
+#header #modeDiv input:checked + .toggle:before {
+  color: #749ed7;
+}
+#header #modeDiv input:checked + .toggle:after {
+  color: #fff;
+}
+#header #modeDiv input:checked + .toggle .toggle__handler {
+  background-color: #ffe5b5;
+  transform: translate3d(40px, 0, 0) rotate(0);
+}
+#header #modeDiv input:checked + .toggle .toggle__handler .crater {
+  opacity: 1;
+}
+#header #modeDiv input:checked + .toggle .star--1 {
+  width: 2px;
+  height: 2px;
+}
+#header #modeDiv input:checked + .toggle .star--2 {
+  width: 4px;
+  height: 4px;
+  transform: translate3d(-5px, 0, 0);
+}
+#header #modeDiv input:checked + .toggle .star--3 {
+  width: 2px;
+  height: 2px;
+  transform: translate3d(-7px, 0, 0);
+}
+#header #modeDiv input:checked + .toggle .star--4,
+#header #modeDiv input:checked + .toggle .star--5,
+#header #modeDiv input:checked + .toggle .star--6 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+#header #modeDiv input:checked + .toggle .star--4 {
+  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#header #modeDiv input:checked + .toggle .star--5 {
+  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+#header #modeDiv input:checked + .toggle .star--6 {
+  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#mainUsers {
+  width: 100%;
+  margin-top: 100px;
+  padding: 20px;
+}
+#mainUsers .oneUser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 0.4s;
+}
+#mainUsers .oneUser .btn {
+  position: absolute;
+  right: 150px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+#mainUsers .oneUser .btn p {
+  padding: 5px 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#mainPosts {
+  width: 100%;
+  margin-top: 100px;
+}
+#mainPosts .onePost {
+  padding: 10px 20px;
+}
+#mainPosts .onePost .postBody {
+  width: 90%;
+}
+#mainPosts .onePost .postTitle {
+  position: relative;
+}
+#mainPosts .onePost .postTitle .comment {
+  top: -5px;
+  font-size: 25px;
+  position: absolute;
+  right: 100px;
+  cursor: pointer;
+}
+
+#mainCom {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainCom .com {
+  padding: 10px;
+}
+#mainCom .com .oneCom {
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */

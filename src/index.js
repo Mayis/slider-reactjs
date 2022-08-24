@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Users from "./json_placeholder/Users";
+import Home from "./final json/Components/Home";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Users />);
+root.render(<Home />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
