@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import DarkMode from "../helpers/DarkMode";
 import request from "../helpers/request";
 import Comment from "./Comment";

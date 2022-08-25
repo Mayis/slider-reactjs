@@ -22,7 +22,7 @@ export default function User({ user }) {
         </NavLink>
         <NavLink
           className={`useralbum  ${dark ? "dark" : "light"}`}
-          to="/albums"
+          to={`/albums/${id}`}
         >
           ALBUMS
         </NavLink>
