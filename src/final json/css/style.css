@@ -57,6 +57,33 @@
   background-color: white;
   color: black;
 }
+#header #navBar {
+  position: absolute;
+  left: 5px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+#header #navBar .activeItem {
+  color: #ff9100;
+  transition: 0.4s;
+  padding: 3px 5px;
+  font-size: 17px;
+}
+#header #navBar .navItem {
+  color: black;
+  font-size: 17px;
+  transition: 0.4s;
+  padding: 3px 2px;
+}
+#header #navBar .activeLight {
+  color: #ff9100;
+  transition: 0.4s;
+}
+#header #navBar .light {
+  color: white;
+  transition: 0.4s;
+}
 #header #modeDiv {
   position: relative;
   width: 400px;
@@ -276,6 +303,7 @@
 }
 #mainPosts .onePost .postBody {
   width: 90%;
+  text-align: justify;
 }
 #mainPosts .onePost .postTitle {
   position: relative;
@@ -310,14 +338,11 @@
 #mainAlbum {
   width: 100%;
   margin-top: 100px;
-  padding: 10px;
+  padding: 20px;
 }
 #mainAlbum .oneAlbum {
   padding: 12px 15px;
   margin-bottom: 10px;
-}
-#mainAlbum .oneAlbum .albumBody {
-  width: 90%;
 }
 #mainAlbum .oneAlbum .albumTitle {
   position: relative;
@@ -326,7 +351,7 @@
   top: -5px;
   font-size: 25px;
   position: absolute;
-  right: 100px;
+  right: 200px;
   cursor: pointer;
 }
 

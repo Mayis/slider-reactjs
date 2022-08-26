@@ -8,11 +8,13 @@ export default function Posts() {
   const { userId } = useParams();
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    request(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then(
-      (posts) => setPosts(posts)
-    );
+    const userPost = `?userId=${userId}`;
+    const allPost = "";
+    request(
+      `https://jsonplaceholder.typicode.com/posts${userId ? userPost : allPost}`
+    ).then((posts) => setPosts(posts));
   }, [userId]);
-  console.log(posts);
+  console.log(userId);
   return (
     <div id="mainPosts" className={dark ? "lightBgr" : "darkBgr"}>
       {posts && posts.map((post, i) => <Post key={`post${i}`} post={post} />)}

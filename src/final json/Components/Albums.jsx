@@ -8,9 +8,13 @@ export default function Albums() {
   const { userId } = useParams();
   const [albums, setAlbums] = useState([]);
   useEffect(() => {
-    request(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then(
-      (albums) => setAlbums(albums)
-    );
+    const userAlbums = `?userId=${userId}`;
+    const allAlbums = "";
+    request(
+      `https://jsonplaceholder.typicode.com/albums${
+        userId ? userAlbums : allAlbums
+      }`
+    ).then((albums) => setAlbums(albums));
   }, [userId]);
   console.log(albums);
   return (

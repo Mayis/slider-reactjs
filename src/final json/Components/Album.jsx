@@ -3,7 +3,7 @@ import { useContext } from "react";
 import DarkMode from "../helpers/DarkMode";
 import { NavLink } from "react-router-dom";
 export default function Album({ album }) {
-  const { body, title, id } = album;
+  const { title, id } = album;
   const dark = useContext(DarkMode);
   return (
     <div className="oneAlbum">
@@ -16,7 +16,6 @@ export default function Album({ album }) {
           &#128248;
         </NavLink>
       </h4>
-      <p className={`albumBody ${dark ? "dark" : "light"}`}>{body}</p>
     </div>
   );
 }

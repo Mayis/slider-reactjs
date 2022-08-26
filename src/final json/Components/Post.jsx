@@ -11,6 +11,9 @@ export default function Post({ post }) {
       (comments) => setComments(comments)
     );
   };
+  const closeCom = () => {
+    setComments(null);
+  };
 
   return (
     <>
@@ -27,7 +30,7 @@ export default function Post({ post }) {
         <p className={`postBody ${dark ? "dark" : "light"}`}>{body}</p>
       </div>
       {comments && (
-        <div id="mainCom" onClick={(e) => setComments(null)}>
+        <div id="mainCom" onClick={closeCom}>
           <div className="com" onClick={(e) => e.stopPropagation()}>
             {comments.map((comment, i) => (
               <Comment key={`com${i}`} com={comment} />

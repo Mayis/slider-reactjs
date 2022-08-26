@@ -52,6 +52,33 @@
     background-color: white;
     color: black;
   }
+  #navBar {
+    position: absolute;
+    left: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    .activeItem {
+      color: #ff9100;
+      transition: 0.4s;
+      padding: 3px 5px;
+      font-size: 17px;
+    }
+    .navItem {
+      color: black;
+      font-size: 17px;
+      transition: 0.4s;
+      padding: 3px 2px;
+    }
+    .activeLight {
+      color: #ff9100;
+      transition: 0.4s;
+    }
+    .light {
+      color: white;
+      transition: 0.4s;
+    }
+  }
   #modeDiv {
     position: relative;
     width: 400px;
@@ -300,6 +327,7 @@
     padding: 10px 20px;
     .postBody {
       width: 90%;
+      text-align: justify;
     }
     .postTitle {
       position: relative;
@@ -334,20 +362,18 @@
 #mainAlbum {
   width: 100%;
   margin-top: 100px;
-  padding: 10px;
+  padding: 20px;
   .oneAlbum {
     padding: 12px 15px;
     margin-bottom: 10px;
-    .albumBody {
-      width: 90%;
-    }
+
     .albumTitle {
       position: relative;
       .photos {
         top: -5px;
         font-size: 25px;
         position: absolute;
-        right: 100px;
+        right: 200px;
         cursor: pointer;
       }
     }

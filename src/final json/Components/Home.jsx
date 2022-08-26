@@ -18,10 +18,10 @@ export default function Home() {
           <Header toDark={toDark} />
           <Routes>
             <Route path="/" element={<Users />} />
-            <Route path="/posts">
+            <Route path="/posts" element={<Posts />}>
               <Route path=":userId" element={<Posts />} />
             </Route>
-            <Route path="/albums">
+            <Route path="/albums" element={<Albums />}>
               <Route path=":userId" element={<Albums />} />
             </Route>
             <Route path="/albums/photos">
